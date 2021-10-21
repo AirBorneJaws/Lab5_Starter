@@ -33,4 +33,6 @@ function init() {
       image.src='assets/images/no-image.png';
     }
   });
+
+
 }
