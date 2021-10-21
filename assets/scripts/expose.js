@@ -1,10 +1,9 @@
 // expose.js
 
 window.addEventListener('DOMContentLoaded', init);
-
+var jsConfetti = new JSConfetti();
 function init() {
   // TODO
-  var jsConfetti = new JSConfetti();
   var element = document.getElementById("horn-select");
 
   element.addEventListener("change",function()
