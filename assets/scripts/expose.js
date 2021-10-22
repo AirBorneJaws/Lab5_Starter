@@ -6,8 +6,7 @@ var jsConfetti = new JSConfetti();
 function init() {
   // TODO
   var element = document.getElementById("horn-select");
-  var soundB= document.querySelector('button');
-  var slideB = document.getElementById("volume");
+
 
   element.addEventListener("change",function()
   {
@@ -36,11 +35,12 @@ function init() {
     }
   });
 
+  var soundB= document.querySelector('button');
   soundB.addEventListener("click",function()
   {
     var sound = document.getElementsByClassName("hidden");
     var audio = new Audio(sound.src);
-    audio.volume = (document.getElementById("volume").value/100);
+    audio.volume = document.getElementById("volume").value/100;
     if (audio.volume==0)
     {
       return;
@@ -57,6 +57,7 @@ function init() {
 
   });
 
+  var slideB = document.getElementById("volume");
   slideB.addEventListener("change",function()
   {
     var volumeInc = document.getElementById("volume-controls");
