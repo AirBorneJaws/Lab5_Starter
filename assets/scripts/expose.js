@@ -6,6 +6,7 @@ function init() {
   var jsConfetti = new jsConfetti();
   var element = document.getElementById("horn-select");
   var soundB= document.querySelector('button');
+  var slideB = document.getElementById("volume");
 
   element.addEventListener("change",function()
   {
@@ -53,7 +54,8 @@ function init() {
       audio.play();
     }
 
-  })
+  });
+  
 
   
 
