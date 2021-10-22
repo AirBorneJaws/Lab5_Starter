@@ -3,7 +3,7 @@
 window.addEventListener('DOMContentLoaded', init);
 function init() {
   // TODO
-  var jsConfetti = new jsConfetti();
+  var jsConfetti = new JSConfetti();
   var element = document.getElementById("horn-select");
   var soundB= document.querySelector('button');
   var slideB = document.getElementById("volume");
@@ -35,7 +35,7 @@ function init() {
     }
   });
 
-  soundButton.addEventListener("click",function()
+  soundB.addEventListener("click",function()
   {
     var sound2 = document.getElementsByClassName("hidden");
     var audio = new Audio(sound2.src);
