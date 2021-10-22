@@ -1,10 +1,11 @@
 // expose.js
 
 window.addEventListener('DOMContentLoaded', init);
-var jsConfetti = new JSConfetti();
 function init() {
   // TODO
+  var jsConfetti = new jsConfetti();
   var element = document.getElementById("horn-select");
+  var soundB= document.querySelector('button');
 
   element.addEventListener("change",function()
   {
@@ -32,6 +33,29 @@ function init() {
       image.src='assets/images/no-image.png';
     }
   });
+
+  soundButton.addEventListener("click",function()
+  {
+    var sound2 = document.getElementsByClassName("hidden");
+    var audio = new Audio(sound2.src);
+    audio.volume = dcment.getElementById("volume").value/100;
+    if (audio.volume==0)
+    {
+
+    }
+    if (document.getElementById("horn-select").options[CustomElementRegistry.selectedIndex].text=="Party Horn")
+    {
+      jsConfetti.addConfetti();
+      audio.play();
+    }
+    else 
+    {
+      audio.play();
+    }
+
+  })
+
+  
 
 
 }
