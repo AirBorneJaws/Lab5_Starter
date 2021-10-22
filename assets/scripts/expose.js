@@ -55,7 +55,28 @@ function init() {
     }
 
   });
-  
+
+  slideB.addEventListener("change",function()
+  {
+    var volumeInc = document.getElementById("volume-controls");
+    var speakerImage = volumeInc.querySelector('img');
+    if(slideB.value==0)
+    {
+      speakerImage.src='assets/icons/volume-level-0.svg';
+    }
+    else if(slideB.value>=1 && slideB.value<33)
+    {
+      speakerImage.src='assets/icons/volume-level-1.svg';
+    }
+    else if(slideB.value>=33 && slideB.value<67)
+    {
+      speakerImage.src='assets/icons/volume-level-2.svg';
+    }
+    else if(slideB.value>=67)
+    {
+      speakerImage.src='assets/icons/volume-level-3.svg';
+    }
+  });
 
   
 
