@@ -38,14 +38,14 @@ function init() {
 
   soundB.addEventListener("click",function()
   {
-    var sound2 = document.getElementsByClassName("hidden");
-    var audio = new Audio(sound2.src);
-    audio.volume = dcment.getElementById("volume").value/100;
+    var sound = document.getElementsByClassName("hidden");
+    var audio = new Audio(sound.src);
+    audio.volume = (document.getElementById("volume").value/100);
     if (audio.volume==0)
     {
-
+      return;
     }
-    if (document.getElementById("horn-select").options[CustomElementRegistry.selectedIndex].text=="Party Horn")
+    if (document.getElementById("horn-select").options[element.selectedIndex].text=="Party Horn")
     {
       jsConfetti.addConfetti();
       audio.play();
