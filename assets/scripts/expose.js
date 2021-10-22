@@ -10,7 +10,7 @@ function init() {
 
   element.addEventListener("change",function()
   {
-    var text = element.options[element.selectIndex].text;
+    var text = element.options[element.selectedIndex].text;
     var image = document.querySelector('img');
     var sound = document.getElementsByClassName("hidden");
 
