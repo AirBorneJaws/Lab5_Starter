@@ -27,6 +27,7 @@ function populateVoiceList()
 function init() {
   // TODO
   populateVoiceList();
+  populateVoiceList();
 
   var button = document.querySelector('button');
 
