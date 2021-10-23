@@ -3,7 +3,6 @@
 window.addEventListener('DOMContentLoaded', init);
 var voices = [];
 var smilyFace = document.querySelector('img');
-var openSoundMenu = document.querySelector('select');
 function populateVoiceList() {
   if(typeof speechSynthesis === 'undefined') {
     return;
