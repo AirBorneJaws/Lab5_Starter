@@ -3,11 +3,12 @@
 window.addEventListener('DOMContentLoaded', init);
 var voices = [];
 var smilyFace = document.querySelector('img');
+var voiceSelect = document.querySelector('select');
 
 function populateVoiceList()
 {
-  var openSoundMenu = document.getElementById("voice-select");
   voices = speechSynthesis.getVoices();
+  
   for (var i=0;i<voices.length;i++)
   {
     var option = document.createElement('option');
@@ -20,16 +21,12 @@ function populateVoiceList()
 
     option.setAttribute('data-lang',voices[i].lang);
     option.setAttribute('data-name',voices[i].name);
-    openSoundMenu.appendChild(soundOption);
+    voiceSelect.appendChild(soundOption);
   }
 }
 function init() {
   // TODO
   populateVoiceList();
-  if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) 
-  {
-    speechSynthesis.onvoiceschanged = addVoices;
-  }
 
   var button = document.querySelector('button');
 
