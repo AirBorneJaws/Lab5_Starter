@@ -1,14 +1,17 @@
 // explore.js
 
 window.addEventListener('DOMContentLoaded', init);
+var synth=window.speechSynthesis;
 var voices = [];
 var smilyFace = document.querySelector('img');
-function populateVoiceList() {
-  if(typeof speechSynthesis === 'undefined') {
+function populateVoiceList()
+{
+  if(typeof speechSynthesis === 'undefined') 
+  {
     return;
   }
 
-  voices = speechSynthesis.getVoices();
+  voices = synth.getVoices();
 
   for(var i = 0; i < voices.length; i++) {
     var option = document.createElement('option');
