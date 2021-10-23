@@ -3,7 +3,7 @@
 window.addEventListener('DOMContentLoaded', init);
 var voices = [];
 var smilyFace = document.querySelector('img');
-var voiceSelect = document.querySelector('select');
+var openSoundMenu = document.querySelector('select');
 
 function populateVoiceList()
 {
@@ -21,7 +21,7 @@ function populateVoiceList()
 
     option.setAttribute('data-lang', voices[i].lang);
     option.setAttribute('data-name', voices[i].name);
-    voiceSelect.appendChild(option);
+    openSoundMenu.appendChild(option);
   }
 }
 function init() {
