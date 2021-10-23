@@ -26,6 +26,10 @@ function populateVoiceList()
 function init() {
   // TODO
   populateVoiceList();
+  if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) 
+  {
+    speechSynthesis.onvoiceschanged = addVoices;
+  }
 
   var button = document.querySelector('button');
 
